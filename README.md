@@ -4,7 +4,7 @@
 * `openai`
 
 ## Setup & Running
-1. Set your API keys:
+1. Set your API keys with a `.env` file:
    * `OPENROUTER_API_KEY`
    * `GEMINI_API_KEY`
 
