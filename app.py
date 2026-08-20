@@ -4,15 +4,20 @@ import streamlit as st
 from google import genai
 from openai import OpenAI
 
+st.text("pls dont waste my tokens")
+
 openrouter_models = {
     "NVIDIA Nemotron 3 Ultra": "nvidia/nemotron-3-ultra-550b-a55b:free",
     "NVIDIA Nemotron 3.5 Lightning": "nvidia/nemotron-3.5-lightning:free",
     "NVIDIA Nemotron 3 Super": "nvidia/nemotron-3-super-120b-a12b:free",
+    "LiquidAI LFM2.5-Embedding-350M": "liquid/lfm-2.5-embedding-350m:free",
+    "LiquidAI LFM2.5-2.6B": "liquid/lfm-2.5-2.6b:free",
     "Z.ai GLM-5.2": "z-ai/glm-5.2:free",
-    "Google Gemma 4 26B A4B": "google/gemma-4-26b-a4b-it:free",
-    "Google Gemma 4 31B": "google/gemma-4-31b-it:free",
     "gpt-oss-20b": "openai/gpt-oss-20b:free",
     "Poolside Languna S 2.1": "poolside/laguna-s-2.1:free",
+    "Poolside Languna XS 2.1": "poolside/laguna-xs-2.1:free",
+    "Google Gemma 4 26B A4B": "google/gemma-4-26b-a4b-it:free",
+    "Google Gemma 4 31B": "google/gemma-4-31b-it:free",
 }
 
 gai_studio_models = {
@@ -29,7 +34,7 @@ selected_label = st.selectbox(
     options = list(all_models.keys()),
     index = None,
     placeholder = "Select a model...",
-    # i forgot what this placeholder is???
+    # i forgot what this placeholder is for???
 )
 
 def load_css(file_name):
