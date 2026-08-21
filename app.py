@@ -4,9 +4,6 @@ import streamlit as st
 from google import genai
 from openai import OpenAI
 from huggingface_hub import InferenceClient
-# from dotenv import load_dotenv
-
-# load_dotenv()
 
 openrouter_models = {
     "NVIDIA Nemotron 3 Ultra": "nvidia/nemotron-3-ultra-550b-a55b:free",
