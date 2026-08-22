@@ -12,7 +12,7 @@ openrouter_models = {
     "LiquidAI LFM2.5 Embedding-350M": "liquid/lfm-2.5-embedding-350m:free",
     "LiquidAI LFM2.5 2.6B": "liquid/lfm-2.5-2.6b:free",
     "Z.ai GLM 5.2": "z-ai/glm-5.2:free",
-    "gpt-oss-20b": "openai/gpt-oss-20b:free",
+    "OpenAI gpt-oss-20b": "openai/gpt-oss-20b:free",
     "Poolside Languna S 2.1": "poolside/laguna-s-2.1:free",
     "Poolside Languna XS 2.1": "poolside/laguna-xs-2.1:free",
     "Google Gemma 4 26B A4B": "google/gemma-4-26b-a4b-it:free",
@@ -26,7 +26,6 @@ gai_studio_models = {
 }
 
 huggingface_models = {
-    "Zephyr 7B Beta": "HuggingFaceH4/zephyr-7b-bet",
     "Qwen3 0.6B": "Qwen/Qwen3-0.6B",
     "Qwen2.5 Coder 7B Instruct": "Qwen/Qwen2.5-Coder-7B-Instruct",
     "DeepSeek R1": "deepseek-ai/DeepSeek-R1",
@@ -34,9 +33,12 @@ huggingface_models = {
     "Deepseek V4 Pro": "deepseek-ai/DeepSeek-V4-Pro",
     "Z.ai GLM 4.7 Flash": "zai-org/GLM-4.7-Flash",
     "NVIDIA Nemotron 3 Nano 30B A3B": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+    "Qwen3.8 2.4T A95B": "Qwen/Qwen3.8-2.4T-A95B",
+    "Tencent Hy3": "tencent/Hy3"
 }
 
 all_models = {**openrouter_models, **gai_studio_models, **huggingface_models}
+all_models = dict(sorted(all_models.items()))
 
 selected_label = st.selectbox(
     "",
